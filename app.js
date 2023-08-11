@@ -18,6 +18,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const helmet = require('helmet');
+const compression = require('compression');
 
 // using template engine
 app.set('view engine', 'pug'); //initialize pug
@@ -66,6 +67,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 // Serving static files
 app.use(express.static(`${__dirname}/public`));
 
