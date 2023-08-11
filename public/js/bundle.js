@@ -12152,7 +12152,7 @@ var login = /*#__PURE__*/function () {
           _context.next = 3;
           return (0, _axios.default)({
             method: 'POST',
-            url: '/api/v1/user/login',
+            url: 'http://127.0.0.1:3000/api/v1/user/login',
             data: {
               email: email,
               password: password
@@ -12194,7 +12194,7 @@ var logout = /*#__PURE__*/function () {
           _context2.next = 3;
           return (0, _axios.default)({
             method: 'GET',
-            url: '/api/v1/user/logout'
+            url: 'http://127.0.0.1:3000/api/v1/user/logout'
           });
         case 3:
           res = _context2.sent;
@@ -12312,7 +12312,7 @@ var updateSetting = /*#__PURE__*/function () {
           _context.next = 5;
           return (0, _axios.default)({
             method: 'PATCH',
-            url: "/api/v1/user/".concat(url),
+            url: "http://127.0.0.1:3000/api/v1/user/".concat(url),
             //this data will sent to the server , it store in body of the req , [req.body]
             data: data
           });
@@ -12587,7 +12587,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56695" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56056" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

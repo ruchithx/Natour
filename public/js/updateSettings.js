@@ -9,7 +9,7 @@ export const updateSetting = async (data, type) => {
 
     const res = await axios({
       method: 'PATCH',
-      url: `/api/v1/user/${url}`,
+      url: `http://127.0.0.1:3000/api/v1/user/${url}`,
 
       //this data will sent to the server , it store in body of the req , [req.body]
       data,
